@@ -9,5 +9,4 @@ def calculator():
     calculator = CalculatorPage(driver=driver, url=url_calculator)
     calculator.go()
     yield calculator
-    #wszystko za slowem yield wykona sie na koniec testu
     calculator.quit()
