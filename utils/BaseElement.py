@@ -3,7 +3,7 @@ from selenium.webdriver.support import expected_conditions as ec
 
 
 class BaseElement(object):
-    def __init__(self, driver, locator,):
+    def __init__(self, driver, locator):
         self.driver = driver
         self.locator = locator
         self.web_element = self.find()
