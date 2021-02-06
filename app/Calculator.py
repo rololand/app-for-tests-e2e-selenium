@@ -6,7 +6,10 @@ from utils.Input import Input
 from utils.Select import Select
 
 
-class CalculatorPage(BasePage):
+class Calculator(object):
+    def __init__(self, driver):
+        self.driver = driver
+
     @property
     def legend(self):
         locator = (By.CSS_SELECTOR, 'legend')

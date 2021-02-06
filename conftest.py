@@ -1,12 +1,13 @@
 from pytest import fixture
 from selenium import webdriver
-from calculator.CalculatorPage import CalculatorPage
+from app.App import App
+
 
 @fixture(scope='class')
-def calculator():
+def app():
     driver = webdriver.Chrome()
-    url_calculator = 'https://rololand.github.io/app-for-tests'
-    calculator = CalculatorPage(driver=driver, url=url_calculator)
-    calculator.go()
-    yield calculator
-    calculator.quit()
+    url_app = 'https://rololand.github.io/app-for-tests'
+    app = App(driver=driver, url=url_app)
+    app.go()
+    yield app
+    app.quit()
