@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-from utils.BasePage import BasePage
 from utils.BaseElement import BaseElement
 from utils.Input import Input
 from utils.Select import Select

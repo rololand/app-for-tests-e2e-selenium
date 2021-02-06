@@ -19,6 +19,12 @@ class BaseElement(object):
         element.click()
         return None
 
+    def get_attribute(self, attribute):
+        return self.web_element.get_attribute(attribute)
+
+    def get_css_value(self, css_property):
+        return self.web_element.value_of_css_property(css_property)
+
     @property
     def text(self):
         return self.web_element.text
